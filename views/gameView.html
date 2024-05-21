@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hashApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Hash-Tag</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+    <script src="/angular/angular.min.js"></script>
+</head>
+<body ng-controller="hashController as vm">
+    <div class="conteiner" ng-model="vm.nome">
+        <header> 
+            <h1> Game Hash Tag</h1>
+        </header>
+        <div class="score">
+            SCORE <br><br>
+            RED : {{ vm.scoreRed }} <br>
+            BLUE : {{ vm.scoreBlue }} <br><br>
+            Turn Player 
+            <span ng-if="vm.player == true">Blue</span>
+            <span ng-if="vm.player == false">Red</span>
+        </div>
+        <main>
+            <div class="btn" ng-click="vm.active(0)" ng-class="{'PlayerOne':'activePlayerOne', 'PlayerTwo':'activePlayerTwo'}[vm.hashs[0]]"></div>
+            <div class="btn" ng-click="vm.active(1)" ng-class="{'PlayerOne':'activePlayerOne', 'PlayerTwo':'activePlayerTwo'}[vm.hashs[1]]"></div>
+            <div class="btn" ng-click="vm.active(2)" ng-class="{'PlayerOne':'activePlayerOne', 'PlayerTwo':'activePlayerTwo'}[vm.hashs[2]]"></div>
+            <div class="btn" ng-click="vm.active(3)" ng-class="{'PlayerOne':'activePlayerOne', 'PlayerTwo':'activePlayerTwo'}[vm.hashs[3]]"></div>
+            <div class="btn" ng-click="vm.active(4)" ng-class="{'PlayerOne':'activePlayerOne', 'PlayerTwo':'activePlayerTwo'}[vm.hashs[4]]"></div>
+            <div class="btn" ng-click="vm.active(5)" ng-class="{'PlayerOne':'activePlayerOne', 'PlayerTwo':'activePlayerTwo'}[vm.hashs[5]]"></div>
+            <div class="btn" ng-click="vm.active(6)" ng-class="{'PlayerOne':'activePlayerOne', 'PlayerTwo':'activePlayerTwo'}[vm.hashs[6]]"></div>
+            <div class="btn" ng-click="vm.active(7)" ng-class="{'PlayerOne':'activePlayerOne', 'PlayerTwo':'activePlayerTwo'}[vm.hashs[7]]"></div>
+            <div class="btn" ng-click="vm.active(8)" ng-class="{'PlayerOne':'activePlayerOne', 'PlayerTwo':'activePlayerTwo'}[vm.hashs[8]]"></div>
+        </main>
+        <footer>
+            <h3>Created by: Álefe C.</h3>
+            <h5>©2019 Copyright, All rights reserved</h5>
+        </footer>
+    </div>
+
+    <script src="/hashController.js"></script>
+</body>
+</html>
